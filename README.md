@@ -1,3 +1,3 @@
-# My GitHub Space Shooter
+# GitHub Space Shooter
 
 ![GitHub Contribution Game](game.gif)
