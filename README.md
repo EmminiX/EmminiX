@@ -37,6 +37,10 @@ I create **AI-powered educational platforms** and **intelligent systems** that p
 <tr>
 <td align="center">🥇<br><b>EU GREEN Innovation Days 2025</b><br>Winner</td>
 <td align="center">🏅<br><b>Irish Enterprise Awards</b><br>Best Accessible EdTech 2026</td>
+<td align="center">🌟<br><b>Irish Enterprise Awards</b><br>Ethical AI Excellence 2026</td>
+</tr>
+<tr>
+<td align="center">🏆<br><b>TechIreland AI Challenge</b><br>Finalist 2025 (MedicSage)</td>
 <td align="center">⭐<br><b>AI Awards Ireland</b><br>2 Nominations (2025)</td>
 <td align="center">🎖️<br><b>Student Senator</b><br>Award 2024/2025</td>
 </tr>
@@ -74,18 +78,30 @@ I create **AI-powered educational platforms** and **intelligent systems** that p
 - 📚 Comprehensive curriculum (9 sections)
 - ♿ Full accessibility features
 
-### 🐧 [Linux Learning Platform](https://linux.emmi.zone)
-**Interactive Linux Education**
-- 💻 Command-line mastery
-- 🎯 Dynamic quiz system
-- 🤖 AI-powered assistance
-- 📱 Progressive Web App (offline capable)
+### 🏥 [MedicSage](https://medicsage.eu)
+**Multi-Agent Medical Care System**
+- 🤖 AI-powered diagnostic assistance
+- 🔬 Multi-agent collaborative approach
+- 🏆 TechIreland National AI Challenge Finalist 2025
+- 🔒 Privacy-first medical intelligence
+
+### 🏰 [LeitrimWay](https://leitrimway.ie)
+**Tourism & Community Platform**
+- 🗺️ Interactive tourism experiences
+- 📍 Local business directory
+- 🌄 Cultural heritage showcase
+- 📱 Mobile-optimized exploration
+
+### ⚡ [FlowForge](https://flowforge.emmi.zone)
+**Workflow Automation Platform**
+- 🔄 Process automation tools
+- 🎯 Efficiency optimization
+- 🔗 System integrations
+- 📊 Analytics & insights
 
 ### 🌍 Other Notable Projects
+- **[TEEC](https://teec.click)** - Tech Education & Community Hub
 - **[Verdana](https://verdana.emmi.zone)** - EU Green Policies AI Assistant
-- **[LeitrimWay](https://leitrimway.ie)** - Tourism & Community Platform
-- **[TEEC](https://teec.click)** - Tech Education & Community
-- **[FlowForge](https://flowforge.emmi.zone)** - Workflow Automation
 
 ---
 
@@ -176,11 +192,11 @@ I don't just build for neurodivergent users—I **am** a neurodivergent builder.
 
 <div align="center">
 
-![Emanuel's GitHub Stats](https://github-readme-stats.vercel.app/api?username=EmminiX&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true)
+<img src="https://github-readme-stats.vercel.app/api?username=EmminiX&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="Emanuel's GitHub Stats" />
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=EmminiX&layout=compact&theme=tokyonight&hide_border=true)
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=EmminiX&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=EmminiX&theme=tokyonight&hide_border=true)
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=EmminiX&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
 
 </div>
 
