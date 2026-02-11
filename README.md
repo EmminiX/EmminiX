@@ -79,11 +79,12 @@ I create **AI-powered educational platforms** and **intelligent systems** that p
 - ♿ Full accessibility features
 
 ### 🏥 [MedicSage](https://medicsage.eu)
-**Multi-Agent Medical Care System**
-- 🤖 AI-powered diagnostic assistance
-- 🔬 Multi-agent collaborative approach
+**Multi-Agent Healthcare AI System**
+- 🤖 Collaborative AI agents for medical decision support
+- 🔬 Coordinated multi-agent diagnostic approach
 - 🏆 TechIreland National AI Challenge Finalist 2025
-- 🔒 Privacy-first medical intelligence
+- 🔐 Privacy-preserving healthcare intelligence
+- 🎯 Concept platform for next-gen medical care
 
 ### 🏰 [LeitrimWay](https://leitrimway.ie)
 **Tourism & Community Platform**
@@ -92,16 +93,21 @@ I create **AI-powered educational platforms** and **intelligent systems** that p
 - 🌄 Cultural heritage showcase
 - 📱 Mobile-optimized exploration
 
-### ⚡ [FlowForge](https://flowforge.emmi.zone)
-**Workflow Automation Platform**
-- 🔄 Process automation tools
-- 🎯 Efficiency optimization
-- 🔗 System integrations
-- 📊 Analytics & insights
+### ⏱️ [FlowForge-Track](https://flowforge.emmi.zone)
+**Privacy-First Time Tracking & Invoicing**
+- 🔒 100% local data storage - no cloud, no subscriptions
+- ⏰ Floating timer widget with global keyboard shortcuts
+- 📊 Client & project management with analytics
+- 🧾 Offline PDF invoice generation
+- ♿ Neurodivergent-friendly UI (ADHD/dyslexia optimized)
+- 🎨 Customizable themes, Pomodoro timer, idle detection
 
-### 🌍 Other Notable Projects
-- **[TEEC](https://teec.click)** - Tech Education & Community Hub
-- **[Verdana](https://verdana.emmi.zone)** - EU Green Policies AI Assistant
+### 🎓 [TEEC.click](https://teec.click)
+**Tech Education & Community Hub**
+- 💻 Educational resources and tutorials
+- 🤝 Community-driven learning
+- 🚀 Tech career development
+- 📚 Curated learning paths
 
 ---
 
@@ -188,15 +194,13 @@ I don't just build for neurodivergent users—I **am** a neurodivergent builder.
 
 ---
 
-## 📈 GitHub Stats
+## 📈 GitHub Activity
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=EmminiX&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true" alt="Emanuel's GitHub Stats" />
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=EmminiX&theme=tokyonight&hide_border=true)](https://github.com/EmminiX)
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=EmminiX&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=EmminiX&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+**🔥 Building in public • Committed to open source • Always learning**
 
 </div>
 
