@@ -5,7 +5,7 @@
 
 <!-- Typing Animation -->
 <p>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=FFFFFF&center=true&vCenter=true&width=700&lines=%F0%9F%92%A0+EMMI-AI+NEURAL+INTERFACE;Building+Accessible+AI+Since+2024;925%2B+Commits+%E2%80%A2+17+Day+Streak+%F0%9F%94%A5" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=B026FF&center=true&vCenter=true&width=700&lines=%F0%9F%92%A0+EMMI-AI+NEURAL+INTERFACE;Building+Accessible+AI+Since+2024;925%2B+Commits+%E2%80%A2+17+Day+Streak+%F0%9F%94%A5" alt="Typing SVG" />
 </p>
 
 # 🎮 GitHub Space Shooter
