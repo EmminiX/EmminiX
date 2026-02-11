@@ -1,6 +1,23 @@
+<div align="center">
+
+<!-- Animated Cyberpunk Header -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20&height=180&section=header&text=SYSTEM%20STATUS:%20ONLINE&fontSize=42&fontColor=00F0FF&animation=twinkling&fontAlignY=32&desc=Engaging%20Minds%20•%20Merging%20Ideas%20•%20Building%20the%20Future&descSize=16&descAlignY=55" />
+
+<!-- Typing Animation -->
+<p>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&width=700&lines=%F0%9F%92%A0+EMMI-AI+NEURAL+INTERFACE;Building+Accessible+AI+Since+2024;925%2B+Commits+%E2%80%A2+17+Day+Streak+%F0%9F%94%A5" alt="Typing SVG" />
+</p>
+
 # 🎮 GitHub Space Shooter
 
 ![GitHub Contribution Game](game.gif)
+
+<!-- Glowing Divider -->
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+
+**🔥 SYSTEM STATUS: FULLY OPERATIONAL** | **⚡ STREAK: 17 DAYS** | **🎯 MISSIONS: 925+**
+
+</div>
 
 ---
 
@@ -102,12 +119,14 @@ I create **AI-powered educational platforms** and **intelligent systems** that p
 - ♿ Neurodivergent-friendly UI (ADHD/dyslexia optimized)
 - 🎨 Customizable themes, Pomodoro timer, idle detection
 
-### 🎓 [TEEC.click](https://teec.click)
-**Tech Education & Community Hub**
-- 💻 Educational resources and tutorials
-- 🤝 Community-driven learning
-- 🚀 Tech career development
-- 📚 Curated learning paths
+### 📡 [TEEC.click](https://teec.click)
+**The Ephemeral Event Connector**
+- 🛡️ Privacy-first ephemeral social networking for in-person events
+- 📍 Share socials within 3km radius - auto-delete after 3-24h
+- 🔒 Zero PII - no accounts, emails, or phone numbers
+- 🌐 Location fuzzing & digital dead drops
+- ⚡ Cloudflare Turnstile bot protection
+- 🎨 Cyberpunk-themed UI with neon aesthetics
 
 ---
 
