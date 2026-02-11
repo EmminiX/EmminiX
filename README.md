@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Animated Cyberpunk Header -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20&height=180&section=header&text=SYSTEM%20STATUS:%20ONLINE&fontSize=42&fontColor=FFFFFF&animation=twinkling&fontAlignY=32&desc=Engaging%20Minds%20•%20Merging%20Ideas%20•%20Building%20the%20Future&descSize=16&descAlignY=55" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20&height=180&section=header&text=SYSTEM%20STATUS:%20ONLINE&fontSize=42&fontColor=FFFFFF&animation=twinkling&fontAlignY=32&desc=Engaging%20Minds%20•%20Merging%20Ideas%20•%20Building%20the%20Future&descSize=16&descAlignY=55&descColor=1a1a1a" />
 
 <!-- Typing Animation -->
 <p>
