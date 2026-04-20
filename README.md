@@ -34,18 +34,28 @@
 
 <div align="center">
 
-<!--
-  Auto-updated every 6 hours by .github/workflows/metrics.yml
-  Disabled until METRICS_TOKEN secret is configured (see workflow header).
-  Re-enable by uncommenting once the first workflow run succeeds.
-<img src="./metrics.svg" alt="GitHub metrics — auto-refreshed every 6h" />
--->
+<!-- 31-day contribution activity graph — visual, theme-matched, auto-refreshed -->
+<img alt="31-day contribution activity graph" src="https://github-readme-activity-graph.vercel.app/graph?username=EmminiX&theme=tokyo-night&bg_color=0F172A&color=F8FAFC&line=22C55E&point=F8FAFC&area=true&area_color=22C55E&hide_border=true&custom_title=Contributions%20%E2%80%94%20last%2031%20days&days=31" />
 
-<!-- Lightweight stats — rendered on-view by Vercel, ~15min cache -->
+<br /><br />
+
+<!-- Dynamic contribution counter — queries GraphQL via shields.io endpoint, refreshed every 6h by metrics.yml workflow -->
+<img alt="Rolling 12-month total contributions (public + private)" src="https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2FEmminiX%2FEmminiX%2Fmain%2Fcontributions.json&style=for-the-badge&labelColor=0F172A&color=22C55E" />
+
+<br /><br />
+
+<!-- Lightweight stats — commits card hidden because public widget can only see public repos (207/~2,126 = misleading) -->
 <a href="https://github.com/EmminiX">
-  <img height="156" src="https://github-readme-stats.vercel.app/api?username=EmminiX&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0F172A&icon_color=22C55E&title_color=F8FAFC&text_color=94A3B8" />
+  <img height="156" src="https://github-readme-stats.vercel.app/api?username=EmminiX&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0F172A&icon_color=22C55E&title_color=F8FAFC&text_color=94A3B8&hide=commits&include_all_commits=true" />
   <img height="156" src="https://github-readme-stats.vercel.app/api/top-langs/?username=EmminiX&layout=compact&theme=tokyonight&hide_border=true&bg_color=0F172A&title_color=F8FAFC&text_color=94A3B8&langs_count=8" />
 </a>
+
+<!--
+  Auto-updated every 6 hours by .github/workflows/metrics.yml (full metrics.svg).
+  Disabled until METRICS_TOKEN secret is configured (see workflow header).
+  Re-enable by uncommenting once the first workflow run succeeds:
+<img src="./metrics.svg" alt="GitHub metrics — auto-refreshed every 6h" />
+-->
 
 </div>
 

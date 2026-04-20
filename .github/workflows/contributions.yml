@@ -1,0 +1,77 @@
+# ──────────────────────────────────────────────────────────────────────────
+#  Rolling 12-month contributions counter — honest total including private
+#
+#  Queries the GitHub GraphQL API for Emanuel's totalContributions (public
+#  + restricted), writes a shields.io-compatible JSON endpoint to
+#  contributions.json at the repo root, which the README's Activity
+#  section shields.io badge reads via raw.githubusercontent.com.
+#
+#  Runs every 6 hours + on demand. Uses GITHUB_TOKEN which already has
+#  read access to the authenticated user's contributions — no PAT required.
+# ──────────────────────────────────────────────────────────────────────────
+
+name: Contributions badge
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"     # every 6h
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Query GraphQL + write badge JSON
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN || github.token }}
+        run: |
+          set -euo pipefail
+          RESP=$(gh api graphql -f query='{
+            user(login: "EmminiX") {
+              contributionsCollection {
+                contributionCalendar { totalContributions }
+              }
+            }
+          }')
+          TOTAL=$(echo "$RESP" | jq -r '.data.user.contributionsCollection.contributionCalendar.totalContributions')
+
+          if [ -z "$TOTAL" ] || [ "$TOTAL" = "null" ]; then
+            echo "::error::GraphQL returned no total; aborting"
+            exit 1
+          fi
+
+          # Format with thousands separator
+          FORMATTED=$(printf "%'d" "$TOTAL")
+
+          cat > contributions.json <<EOF
+          {
+            "schemaVersion": 1,
+            "label": "contributions · last 12 months",
+            "message": "${FORMATTED}",
+            "color": "22C55E",
+            "labelColor": "0F172A",
+            "cacheSeconds": 21600
+          }
+          EOF
+
+          echo "Wrote contributions.json (total=$FORMATTED)"
+
+      - name: Commit + push if changed
+        run: |
+          if git diff --quiet contributions.json; then
+            echo "No change — skipping commit"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add contributions.json
+          git commit -m "chore(contributions): refresh rolling 12-month counter"
+          git push
