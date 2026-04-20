@@ -18,12 +18,28 @@
 
 ---
 
+## ▸ &nbsp; Contribution Space Shooter
+
+<div align="center">
+
+<img src="game.gif" alt="GitHub contribution space shooter — commits become asteroids, merges become power-ups" width="100%" />
+
+<sub>Commits as asteroids · merges as power-ups · the longer the streak, the brighter the weapons.</sub>
+
+</div>
+
+---
+
 ## ▸ &nbsp; Activity
 
 <div align="center">
 
-<!-- Auto-updated every 6 hours by .github/workflows/metrics.yml -->
+<!--
+  Auto-updated every 6 hours by .github/workflows/metrics.yml
+  Disabled until METRICS_TOKEN secret is configured (see workflow header).
+  Re-enable by uncommenting once the first workflow run succeeds.
 <img src="./metrics.svg" alt="GitHub metrics — auto-refreshed every 6h" />
+-->
 
 <!-- Lightweight stats — rendered on-view by Vercel, ~15min cache -->
 <a href="https://github.com/EmminiX">
@@ -280,21 +296,6 @@ Always interested in:
 </div>
 
 ---
-
-<details>
-<summary align="center"><b>&nbsp;▸&nbsp; Contribution Space Shooter&nbsp;</b> &nbsp;·&nbsp;<sub> click to reveal the personality easter egg</sub></summary>
-
-<br />
-
-<div align="center">
-
-<img src="game.gif" alt="GitHub contribution space shooter" />
-
-<sub>Commits as asteroids. Merges as power-ups. The longer the streak, the brighter the weapons.</sub>
-
-</div>
-
-</details>
 
 <div align="center">
 
