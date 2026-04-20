@@ -50,12 +50,8 @@
   <img height="156" src="https://github-readme-stats.vercel.app/api/top-langs/?username=EmminiX&layout=compact&theme=tokyonight&hide_border=true&bg_color=0F172A&title_color=F8FAFC&text_color=94A3B8&langs_count=8" />
 </a>
 
-<!--
-  Auto-updated every 6 hours by .github/workflows/metrics.yml (full metrics.svg).
-  Disabled until METRICS_TOKEN secret is configured (see workflow header).
-  Re-enable by uncommenting once the first workflow run succeeds:
+<!-- Rich metrics — auto-refreshed every 6h by .github/workflows/metrics.yml. Requires METRICS_TOKEN secret. -->
 <img src="./metrics.svg" alt="GitHub metrics — auto-refreshed every 6h" />
--->
 
 </div>
 
