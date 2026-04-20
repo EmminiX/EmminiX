@@ -1,0 +1,81 @@
+# ──────────────────────────────────────────────────────────────────────────
+#  EmminiX/EmminiX — auto-updated profile metrics
+#  Uses lowlighter/metrics to render a rich SVG every 6h + on main pushes.
+#
+#  ONE-TIME SETUP (required for first run):
+#   1. Create a classic Personal Access Token at:
+#      https://github.com/settings/tokens/new
+#      Name:  "EmminiX profile metrics"
+#      Scopes: public_repo, read:user, read:org
+#      Expiration: no expiry (or 1 year — re-rotate when it nears expiry)
+#   2. Add it as a repo secret:
+#      Settings → Secrets and variables → Actions → "New repository secret"
+#      Name:  METRICS_TOKEN
+#      Value: <paste the PAT>
+#   3. Re-run this workflow manually via the "Run workflow" button once to
+#      produce the first metrics.svg and commit it to main.
+#
+#  After that, the cron schedule keeps it fresh every 6 hours.
+# ──────────────────────────────────────────────────────────────────────────
+
+name: Metrics
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"        # every 6 hours
+  push:
+    branches: [main]
+  workflow_dispatch:              # manual trigger from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate metrics.svg
+        uses: lowlighter/metrics@latest
+        with:
+          # ── Authentication ─────────────────────────────────────────────
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: EmminiX
+
+          # ── Base layout ────────────────────────────────────────────────
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: Europe/Dublin
+          config_order: base.header, isocalendar, languages, stars, activity, achievements
+
+          # ── Contribution heatmap (half-year isometric calendar) ────────
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+
+          # ── Language breakdown (most-used + recently-used) ─────────────
+          plugin_languages: yes
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_details: percentage, lines, bytes-size
+          plugin_languages_colors: github
+          plugin_languages_limit: 8
+
+          # ── Lines of code stats ────────────────────────────────────────
+          plugin_lines: yes
+          plugin_lines_sections: base, repositories
+
+          # ── Top starred repos (up to 4) ────────────────────────────────
+          plugin_stars: yes
+          plugin_stars_limit: 4
+
+          # ── Follower / following ratio ─────────────────────────────────
+          plugin_followup: yes
+
+          # ── Achievements (B-tier and above) ────────────────────────────
+          plugin_achievements: yes
+          plugin_achievements_threshold: B
+          plugin_achievements_secrets: yes
+
+          # ── Output: commit metrics.svg to main ─────────────────────────
+          output_action: commit
+          committer_branch: main
+          committer_message: "chore(metrics): auto-update profile metrics"
+          filename: metrics.svg
