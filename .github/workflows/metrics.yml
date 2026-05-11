@@ -8,7 +8,7 @@
 #  Projects (classic) API, which makes the whole achievements panel fail.
 #  See lowlighter/metrics#1706.
 #
-#  Pinned to commit c09a9ea (2026-05-11). Bump intentionally.
+#  Pinned to commit c09a9ea480 on master (2026-05-11). Bump intentionally.
 #
 #  ONE-TIME SETUP (required for first run):
 #   1. Create a classic Personal Access Token at:
@@ -48,7 +48,7 @@ jobs:
       - name: Generate metrics.svg
         # Maintained community fork (lowlighter/metrics is unmaintained).
         # Pinned to a SHA for supply-chain hygiene.
-        uses: gh-metrics/metrics@c09a9ea3f9a839e7f7e74a01018ae0d3a4267e16
+        uses: gh-metrics/metrics@c09a9ea480ad5ab06eff5b8fef8a8bfd123e5937
         with:
           # ── Authentication ─────────────────────────────────────────────
           token: ${{ secrets.METRICS_TOKEN }}
