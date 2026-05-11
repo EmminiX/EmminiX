@@ -1,13 +1,24 @@
 # ──────────────────────────────────────────────────────────────────────────
 #  EmminiX/EmminiX — auto-updated profile metrics
-#  Uses lowlighter/metrics to render a rich SVG every 6h + on main pushes.
+#  Renders a rich SVG every 6h + on main pushes.
+#
+#  Fork choice (2026-05-11): we use gh-metrics/metrics, the actively
+#  maintained community fork. lowlighter/metrics has been unmaintained for
+#  ~2 years and the "Manager" achievement still queries the deprecated
+#  Projects (classic) API, which makes the whole achievements panel fail.
+#  See lowlighter/metrics#1706.
+#
+#  Pinned to commit c09a9ea (2026-05-11). Bump intentionally.
 #
 #  ONE-TIME SETUP (required for first run):
 #   1. Create a classic Personal Access Token at:
 #      https://github.com/settings/tokens/new
 #      Name:  "EmminiX profile metrics"
-#      Scopes: public_repo, read:user, read:org
-#      Expiration: no expiry (or 1 year — re-rotate when it nears expiry)
+#      Scopes: repo, read:user, read:org
+#        • Use full "repo" (not just public_repo) if you want the lines
+#          plugin to count private repo work too. With public_repo only,
+#          line totals under-report private commits.
+#      Expiration: 1 year (rotate before expiry)
 #   2. Add it as a repo secret:
 #      Settings → Secrets and variables → Actions → "New repository secret"
 #      Name:  METRICS_TOKEN
@@ -35,7 +46,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Generate metrics.svg
-        uses: lowlighter/metrics@latest
+        # Maintained community fork (lowlighter/metrics is unmaintained).
+        # Pinned to a SHA for supply-chain hygiene.
+        uses: gh-metrics/metrics@c09a9ea3f9a839e7f7e74a01018ae0d3a4267e16
         with:
           # ── Authentication ─────────────────────────────────────────────
           token: ${{ secrets.METRICS_TOKEN }}
@@ -46,6 +59,10 @@ jobs:
           base: header, activity, community, repositories, metadata
           config_timezone: Europe/Dublin
           config_order: base.header, isocalendar, languages, stars, activity, achievements
+
+          # ── Repository fetch tuning (broader pool → richer stats) ──────
+          repositories: 200
+          repositories_affiliations: owner, collaborator
 
           # ── Contribution heatmap (half-year isometric calendar) ────────
           plugin_isocalendar: yes
@@ -61,6 +78,7 @@ jobs:
           # ── Lines of code stats ────────────────────────────────────────
           plugin_lines: yes
           plugin_lines_sections: base, repositories
+          plugin_lines_repositories_limit: 4
 
           # ── Top starred repos (up to 4) ────────────────────────────────
           plugin_stars: yes
@@ -70,9 +88,13 @@ jobs:
           plugin_followup: yes
 
           # ── Achievements (B-tier and above) ────────────────────────────
+          # The fork already patches the Projects-classic bug, but we
+          # belt-and-braces ignore the "manager" badge so a future
+          # regression cannot blank the whole panel.
           plugin_achievements: yes
           plugin_achievements_threshold: B
           plugin_achievements_secrets: yes
+          plugin_achievements_ignored: manager
 
           # ── Output: commit metrics.svg to main ─────────────────────────
           output_action: commit
