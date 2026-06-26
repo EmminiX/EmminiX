@@ -48,7 +48,7 @@ jobs:
       - name: Generate metrics.svg
         # Maintained community fork (lowlighter/metrics is unmaintained).
         # Pinned to a SHA for supply-chain hygiene.
-        uses: gh-metrics/metrics@c09a9ea480ad5ab06eff5b8fef8a8bfd123e5937
+        uses: gh-metrics/metrics@09407986bb1faac9b1be3859d17497ea6cec746f
         with:
           # ── Authentication ─────────────────────────────────────────────
           token: ${{ secrets.METRICS_TOKEN }}
