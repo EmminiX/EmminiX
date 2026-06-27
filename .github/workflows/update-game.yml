@@ -18,3 +18,30 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           output-path: 'game.gif'
           strategy: 'random'
+
+      - name: Compress game.gif (keep it under GitHub's GIF autoplay size)
+        run: |
+          set -euo pipefail
+          [ -f game.gif ] || { echo "no game.gif produced"; exit 1; }
+          sudo apt-get update -qq && sudo apt-get install -y -qq gifsicle
+          before=$(stat -c%s game.gif)
+          # -O3 is lossless: ~63% smaller via frame/transparency optimisation,
+          # no quality loss (size is dominated by frame count, not per-frame data).
+          gifsicle -O3 game.gif -o game.opt.gif
+          if [ -s game.opt.gif ] && [ "$(stat -c%s game.opt.gif)" -lt "$before" ]; then
+            mv game.opt.gif game.gif
+          else
+            rm -f game.opt.gif
+          fi
+          echo "game.gif: ${before} -> $(stat -c%s game.gif) bytes"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add game.gif
+          if git diff --cached --quiet; then
+            echo "no change to commit"
+            exit 0
+          fi
+          git commit -m "chore(game): compress space-shooter gif (autoplay)"
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
+          git push origin HEAD:"${GITHUB_REF_NAME}"
