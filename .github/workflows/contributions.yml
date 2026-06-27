@@ -86,8 +86,8 @@ jobs:
                     }
                   }
                 }' -F from="$FROM" -F to="$TO" \
-               | jq '[.data.user.contributionsCollection.contributionCalendar.weeks[].contributionDays[] | {date, count: .contributionCount}]' \
-               > daily.json \
+               | jq '[.data.user.contributionsCollection.contributionCalendar.weeks[].contributionDays[] | {date, count: .contributionCount}]' > daily.json \
+             && jq -e 'length >= 150' daily.json >/dev/null \
              && python3 scripts/render_activity.py < daily.json > activity.svg.tmp \
              && python3 -c 'import xml.dom.minidom,os,sys; xml.dom.minidom.parse("activity.svg.tmp"); sys.exit(0 if os.path.getsize("activity.svg.tmp")>2000 else 1)'; then
             mv activity.svg.tmp activity.svg
