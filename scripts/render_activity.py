@@ -36,9 +36,7 @@ MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
 
-def esc(s):
-    return (str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
-
+# esc() removed (unused)
 
 def load_days(raw):
     """Parse -> sort by date -> keep last WINDOW_DAYS. Returns [(date, count)]."""
