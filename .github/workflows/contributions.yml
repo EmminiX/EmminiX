@@ -141,10 +141,12 @@ jobs:
                 query($login:String!){
                   user(login:$login){
                     repositories(first:100, ownerAffiliations:OWNER, isFork:false){
+                      totalCount
                       nodes{ languages(first:10, orderBy:{field:SIZE,direction:DESC}){ edges{ size node{ name color } } } }
                     }
                   }
                 }' -F login=EmminiX > langs.json \
+             && jq -e '.data.user.repositories.totalCount <= 100' langs.json >/dev/null \
              && python3 scripts/render_cards.py --kind langs < langs.json > top-langs.svg.tmp \
              && python3 -c 'import xml.dom.minidom,os,sys; xml.dom.minidom.parse("top-langs.svg.tmp"); sys.exit(0 if os.path.getsize("top-langs.svg.tmp")>1000 else 1)'; then
             mv top-langs.svg.tmp top-langs.svg
