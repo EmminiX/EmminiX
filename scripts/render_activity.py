@@ -64,8 +64,12 @@ def nice_max(m):
 
 def smooth_path(pts):
     """Catmull-Rom -> cubic bezier 'd' through the points (open curve)."""
-    if len(pts) < 2:
+    if not pts:
         return ""
+    if len(pts) == 1:
+        # single point (e.g. empty-data fallback): emit a bare moveto so the
+        # path is still valid SVG (callers append L/Z for the area fill).
+        return f"M {pts[0][0]:.2f} {pts[0][1]:.2f}"
     d = [f"M {pts[0][0]:.2f} {pts[0][1]:.2f}"]
     n = len(pts)
     for i in range(n - 1):
@@ -191,6 +195,13 @@ def _selftest():
     assert svg.count("<path") >= 3, "expected area + glow + line paths"
     assert nice_max(282) >= 282 and nice_max(5) == 5
     assert smooth_path([(0, 0), (1, 1)]).startswith("M ")
+    assert smooth_path([(3, 4)]) == "M 3.00 4.00"     # 1-point -> valid moveto
+    # empty input -> single-point fallback: every path 'd' must start with M
+    import re
+    esvg = render(load_days([]))
+    minidom.parseString(esvg)
+    for dval in re.findall(r'<path d="([^"]+)"', esvg):
+        assert dval.lstrip().startswith("M"), f"invalid path data: {dval[:24]!r}"
     print("selftest OK")
 
 
