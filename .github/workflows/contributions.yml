@@ -98,14 +98,70 @@ jobs:
           fi
           rm -f daily.json
 
+      - name: Render GitHub stats card
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN || github.token }}
+        run: |
+          set -uo pipefail
+          if gh api graphql -f query='
+                query($login:String!){
+                  user(login:$login){
+                    name
+                    followers{ totalCount }
+                    pullRequests{ totalCount }
+                    issues{ totalCount }
+                    contributionsCollection{
+                      totalCommitContributions
+                      restrictedContributionsCount
+                      totalPullRequestReviewContributions
+                      totalRepositoriesWithContributedCommits
+                    }
+                    repositories(first:100, ownerAffiliations:OWNER, orderBy:{field:STARGAZERS,direction:DESC}){
+                      totalCount nodes{ stargazerCount }
+                    }
+                  }
+                }' -F login=EmminiX > stats.json \
+             && python3 scripts/render_cards.py --kind stats < stats.json > stats.svg.tmp \
+             && python3 -c 'import xml.dom.minidom,os,sys; xml.dom.minidom.parse("stats.svg.tmp"); sys.exit(0 if os.path.getsize("stats.svg.tmp")>1000 else 1)'; then
+            mv stats.svg.tmp stats.svg
+            echo "stats.svg updated"
+          else
+            echo "::warning::stats card refresh failed; keeping previous stats.svg"
+            rm -f stats.svg.tmp
+          fi
+          rm -f stats.json
+
+      - name: Render top-languages card
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN || github.token }}
+        run: |
+          set -uo pipefail
+          if gh api graphql -f query='
+                query($login:String!){
+                  user(login:$login){
+                    repositories(first:100, ownerAffiliations:OWNER, isFork:false){
+                      nodes{ languages(first:10, orderBy:{field:SIZE,direction:DESC}){ edges{ size node{ name color } } } }
+                    }
+                  }
+                }' -F login=EmminiX > langs.json \
+             && python3 scripts/render_cards.py --kind langs < langs.json > top-langs.svg.tmp \
+             && python3 -c 'import xml.dom.minidom,os,sys; xml.dom.minidom.parse("top-langs.svg.tmp"); sys.exit(0 if os.path.getsize("top-langs.svg.tmp")>1000 else 1)'; then
+            mv top-langs.svg.tmp top-langs.svg
+            echo "top-langs.svg updated"
+          else
+            echo "::warning::top-languages card refresh failed; keeping previous top-langs.svg"
+            rm -f top-langs.svg.tmp
+          fi
+          rm -f langs.json
+
       - name: Commit + push if changed
         run: |
-          git add contributions.json activity.svg
+          git add contributions.json activity.svg stats.svg top-langs.svg
           if git diff --cached --quiet; then
             echo "No change — skipping commit"
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "chore(contributions): refresh counter + 6-month activity chart"
+          git commit -m "chore(contributions): refresh counter, activity chart, stats + langs cards"
           git push
