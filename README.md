@@ -48,7 +48,7 @@
 
 <div align="center">
 
-<img alt="6-month contribution activity graph" src="https://github-readme-activity-graph.vercel.app/graph?username=EmminiX&theme=tokyo-night&bg_color=0F172A&color=F8FAFC&line=22C55E&point=F8FAFC&area=true&area_color=22C55E&hide_border=true&custom_title=last+6+months&days=182" />
+<img alt="6-month contribution activity graph, self-rendered" src="activity.svg" width="100%" />
 
 <br /><br />
 

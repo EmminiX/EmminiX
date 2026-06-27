@@ -1,20 +1,22 @@
 # ──────────────────────────────────────────────────────────────────────────
-#  Rolling 12-month contributions counter — honest total including private
+#  Contributions refresh — rolling 12-month counter + 6-month activity chart
 #
-#  Queries the GitHub GraphQL API for Emanuel's totalContributions (public
-#  + restricted), writes a shields.io-compatible JSON endpoint to
-#  contributions.json at the repo root, which the README's Activity
-#  section shields.io badge reads via raw.githubusercontent.com.
+#  1. Rolling-12-month total (public + private) -> contributions.json (a
+#     shields.io endpoint the README badge reads).
+#  2. Last-182-day daily contributions -> activity.svg, a self-rendered area
+#     chart (scripts/render_activity.py). Self-hosted so it isn't capped by a
+#     third-party service and degrades gracefully: if a refresh fails, the
+#     previous activity.svg is kept (never replaced with a broken render).
 #
-#  Runs every 6 hours + on demand. Uses GITHUB_TOKEN which already has
-#  read access to the authenticated user's contributions — no PAT required.
+#  Runs every 6 hours + on demand. Uses GITHUB_TOKEN (or METRICS_TOKEN) which
+#  already has read access to the authenticated user's contributions.
 # ──────────────────────────────────────────────────────────────────────────
 
-name: Contributions badge
+name: Contributions
 
 on:
   schedule:
-    - cron: "0 */6 * * *"     # every 6h
+    - cron: "0 */6 * * *"     # every 6h (4x/day) - data only changes daily
   push:
     branches: [main]
   workflow_dispatch:
@@ -64,14 +66,46 @@ jobs:
 
           echo "Wrote contributions.json (total=$FORMATTED)"
 
+      - name: Render 6-month activity chart
+        env:
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN || github.token }}
+        run: |
+          # No `set -e`: a transient fetch/render failure must NOT fail the run
+          # (no noisy failure email) and must keep the previous good activity.svg.
+          set -uo pipefail
+          FROM=$(date -u -d '-182 days' +%Y-%m-%dT%H:%M:%SZ)
+          TO=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+
+          if gh api graphql -f query='
+                query($from:DateTime!,$to:DateTime!){
+                  user(login:"EmminiX"){
+                    contributionsCollection(from:$from, to:$to){
+                      contributionCalendar{
+                        weeks{ contributionDays{ date contributionCount } }
+                      }
+                    }
+                  }
+                }' -F from="$FROM" -F to="$TO" \
+               | jq '[.data.user.contributionsCollection.contributionCalendar.weeks[].contributionDays[] | {date, count: .contributionCount}]' > daily.json \
+             && jq -e 'length >= 150' daily.json >/dev/null \
+             && python3 scripts/render_activity.py < daily.json > activity.svg.tmp \
+             && python3 -c 'import xml.dom.minidom,os,sys; xml.dom.minidom.parse("activity.svg.tmp"); sys.exit(0 if os.path.getsize("activity.svg.tmp")>2000 else 1)'; then
+            mv activity.svg.tmp activity.svg
+            echo "activity.svg updated"
+          else
+            echo "::warning::activity chart refresh failed; keeping previous activity.svg"
+            rm -f activity.svg.tmp
+          fi
+          rm -f daily.json
+
       - name: Commit + push if changed
         run: |
-          if git diff --quiet contributions.json; then
+          git add contributions.json activity.svg
+          if git diff --cached --quiet; then
             echo "No change — skipping commit"
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add contributions.json
-          git commit -m "chore(contributions): refresh rolling 12-month counter"
+          git commit -m "chore(contributions): refresh counter + 6-month activity chart"
           git push
