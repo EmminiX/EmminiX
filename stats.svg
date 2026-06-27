@@ -3,17 +3,17 @@
 <text x="25" y="34" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="18" font-weight="700" fill="#22C55E">Emmi’s GitHub Stats</text>
 <g transform="translate(26,55)"><path d="M7 0.6 L8.9 4.9 L13.6 5.3 L10 8.4 L11.1 13 L7 10.5 L2.9 13 L4 8.4 L0.4 5.3 L5.1 4.9 Z" fill="#22C55E"/></g>
 <text x="50" y="66" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" fill="#94A3B8">Total Stars Earned:</text>
-<text x="300" y="66" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" font-weight="700" fill="#F8FAFC">11</text>
+<text x="300" y="66" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" font-weight="700" fill="#F8FAFC">15</text>
 <g transform="translate(26,85)"><circle cx="3" cy="3" r="2" fill="none" stroke="#22C55E" stroke-width="1.6"/><circle cx="3" cy="11" r="2" fill="none" stroke="#22C55E" stroke-width="1.6"/><circle cx="11" cy="11" r="2" fill="none" stroke="#22C55E" stroke-width="1.6"/><path d="M3 5 V9 M11 9 V7 a4 4 0 0 0 -4 -4 H5.2" fill="none" stroke="#22C55E" stroke-width="1.6"/></g>
 <text x="50" y="96" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" fill="#94A3B8">Total PRs:</text>
-<text x="300" y="96" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" font-weight="700" fill="#F8FAFC">19</text>
+<text x="300" y="96" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" font-weight="700" fill="#F8FAFC">480</text>
 <g transform="translate(26,115)"><circle cx="7" cy="7" r="6" fill="none" stroke="#22C55E" stroke-width="1.6"/><circle cx="7" cy="7" r="1.6" fill="#22C55E"/></g>
 <text x="50" y="126" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" fill="#94A3B8">Total Issues:</text>
-<text x="300" y="126" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" font-weight="700" fill="#F8FAFC">13</text>
+<text x="300" y="126" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" font-weight="700" fill="#F8FAFC">202</text>
 <g transform="translate(26,145)"><path d="M2 1 H10 a1.2 1.2 0 0 1 1.2 1.2 V13 L7 11 L2.8 13 V2.2 a1.2 1.2 0 0 1 1.2 -1.2 Z" fill="none" stroke="#22C55E" stroke-width="1.6"/></g>
 <text x="50" y="156" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" fill="#94A3B8">Contributed to (last year):</text>
 <text x="300" y="156" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" font-weight="700" fill="#F8FAFC">58</text>
 <circle cx="393" cy="98" r="40" fill="none" stroke="#1E293B" stroke-width="6"/>
-<circle cx="393" cy="98" r="40" fill="none" stroke="#22C55E" stroke-width="6" stroke-linecap="round" stroke-dasharray="108.9 251.3" transform="rotate(-90 393 98)"/>
-<text x="393" y="105" text-anchor="middle" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="26" font-weight="700" fill="#F8FAFC">B</text>
+<circle cx="393" cy="98" r="40" fill="none" stroke="#22C55E" stroke-width="6" stroke-linecap="round" stroke-dasharray="175.9 251.3" transform="rotate(-90 393 98)"/>
+<text x="393" y="105" text-anchor="middle" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="26" font-weight="700" fill="#F8FAFC">A-</text>
 </svg>
