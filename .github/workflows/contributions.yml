@@ -142,7 +142,7 @@ jobs:
                   user(login:$login){
                     repositories(first:100, ownerAffiliations:OWNER, isFork:false){
                       totalCount
-                      nodes{ languages(first:10, orderBy:{field:SIZE,direction:DESC}){ edges{ size node{ name color } } } }
+                      nodes{ languages(first:100, orderBy:{field:SIZE,direction:DESC}){ edges{ size node{ name color } } } }
                     }
                   }
                 }' -F login=EmminiX > langs.json \
