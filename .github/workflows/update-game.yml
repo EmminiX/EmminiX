@@ -22,7 +22,7 @@ jobs:
       - name: Compress game.gif (keep it under GitHub's GIF autoplay size)
         run: |
           set -euo pipefail
-          [ -f game.gif ] || { echo "no game.gif produced"; exit 0; }
+          [ -f game.gif ] || { echo "no game.gif produced"; exit 1; }
           sudo apt-get update -qq && sudo apt-get install -y -qq gifsicle
           before=$(stat -c%s game.gif)
           # -O3 is lossless: ~63% smaller via frame/transparency optimisation,
