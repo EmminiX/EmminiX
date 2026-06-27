@@ -59,8 +59,8 @@
 <br /><br />
 
 <a href="https://github.com/EmminiX">
-  <img height="156" src="https://github-readme-stats.vercel.app/api?username=EmminiX&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0F172A&icon_color=22C55E&title_color=F8FAFC&text_color=94A3B8&hide=commits&include_all_commits=true" alt="GitHub stats card" />
-  <img height="156" src="https://github-readme-stats.vercel.app/api/top-langs/?username=EmminiX&layout=compact&theme=tokyonight&hide_border=true&bg_color=0F172A&title_color=F8FAFC&text_color=94A3B8&langs_count=8" alt="Top languages" />
+  <img height="156" src="stats.svg" alt="GitHub stats card" />
+  <img height="156" src="top-langs.svg" alt="Top languages" />
 </a>
 
 <br /><br />
