@@ -121,6 +121,7 @@ jobs:
                     }
                   }
                 }' -F login=EmminiX > stats.json \
+             && jq -e '.data.user.repositories.totalCount <= 100' stats.json >/dev/null \
              && python3 scripts/render_cards.py --kind stats < stats.json > stats.svg.tmp \
              && python3 -c 'import xml.dom.minidom,os,sys; xml.dom.minidom.parse("stats.svg.tmp"); sys.exit(0 if os.path.getsize("stats.svg.tmp")>1000 else 1)'; then
             mv stats.svg.tmp stats.svg
