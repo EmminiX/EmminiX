@@ -183,8 +183,10 @@ def render_langs(langs):
     x = bx
     for i, lg in enumerate(langs):
         w = bw * lg["pct"] / 100
+        if i == len(langs) - 1:
+            w = (bx + bw) - x
         rx = ' rx="5"' if i == 0 else ''
-        s.append(f'<rect x="{x:.1f}" y="{by}" width="{max(0.5, w):.1f}" height="{bh}" '
+        s.append(f'<rect x="{x:.3f}" y="{by}" width="{max(0.5, w):.3f}" height="{bh}" '
                  f'fill="{lg["color"]}"{rx}/>')
         x += w
 
