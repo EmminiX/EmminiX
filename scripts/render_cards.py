@@ -161,9 +161,12 @@ def parse_langs(raw, top=8):
     for repo in raw["data"]["user"]["repositories"]["nodes"]:
         for e in repo["languages"]["edges"]:
             name = e["node"]["name"]
-            color = e["node"]["color"] or "#94A3B8"
-            agg.setdefault(name, {"size": 0, "color": color})
-            agg[name]["size"] += e["size"]
+            api_color = e["node"]["color"]
+            color = api_color or "#94A3B8"
+            entry = agg.setdefault(name, {"size": 0, "color": color})
+            entry["size"] += e["size"]
+            if entry["color"] == "#94A3B8" and api_color:
+                entry["color"] = api_color
     items = sorted(agg.items(), key=lambda kv: -kv[1]["size"])[:top]
     total = sum(v["size"] for _, v in items) or 1
     return [{"name": n, "color": v["color"], "pct": v["size"] * 100 / total}
