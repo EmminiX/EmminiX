@@ -7,7 +7,7 @@
 <rect x="263.385" y="48" width="28.555" height="11" fill="#dea584"/>
 <rect x="291.940" y="48" width="14.873" height="11" fill="#f1e05a"/>
 <rect x="306.813" y="48" width="14.728" height="11" fill="#89e051"/>
-<rect x="321.541" y="48" width="11.912" height="11" fill="#663399"/>
+<rect x="321.541" y="48" width="11.911" height="11" fill="#663399"/>
 <rect x="333.453" y="48" width="4.547" height="11" fill="#f34b7d"/>
 <circle cx="27" cy="82" r="5" fill="#3178c6"/>
 <text x="38" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">TypeScript <tspan fill="#F8FAFC" font-weight="700">55.7%</tspan></text>
