@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="195" viewBox="0 0 360 195" role="img" aria-label="Most used languages">
 <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F172A"/><stop offset="1" stop-color="#0B1120"/></linearGradient></defs><rect x="0.5" y="0.5" width="359" height="194" rx="12" fill="url(#bg)" stroke="#1E293B" stroke-width="1"/>
 <text x="22" y="32" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="16" font-weight="700" fill="#22C55E">Most Used Languages</text>
-<rect x="22.000" y="48" width="175.742" height="11" fill="#3178c6" rx="5"/>
-<rect x="197.742" y="48" width="34.691" height="11" fill="#e34c26"/>
-<rect x="232.433" y="48" width="30.676" height="11" fill="#3572A5"/>
-<rect x="263.109" y="48" width="28.941" height="11" fill="#dea584"/>
-<rect x="292.051" y="48" width="14.841" height="11" fill="#f1e05a"/>
-<rect x="306.892" y="48" width="14.697" height="11" fill="#89e051"/>
-<rect x="321.589" y="48" width="11.873" height="11" fill="#663399"/>
-<rect x="333.462" y="48" width="4.538" height="11" fill="#f34b7d"/>
+<rect x="22.000" y="48" width="175.753" height="11" fill="#3178c6" rx="5"/>
+<rect x="197.753" y="48" width="34.688" height="11" fill="#e34c26"/>
+<rect x="232.441" y="48" width="30.674" height="11" fill="#3572A5"/>
+<rect x="263.115" y="48" width="28.939" height="11" fill="#dea584"/>
+<rect x="292.054" y="48" width="14.840" height="11" fill="#f1e05a"/>
+<rect x="306.895" y="48" width="14.696" height="11" fill="#89e051"/>
+<rect x="321.590" y="48" width="11.872" height="11" fill="#663399"/>
+<rect x="333.463" y="48" width="4.537" height="11" fill="#f34b7d"/>
 <circle cx="27" cy="82" r="5" fill="#3178c6"/>
 <text x="38" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">TypeScript <tspan fill="#F8FAFC" font-weight="700">55.6%</tspan></text>
 <circle cx="201" cy="82" r="5" fill="#e34c26"/>
