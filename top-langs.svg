@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="195" viewBox="0 0 360 195" role="img" aria-label="Most used languages">
 <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F172A"/><stop offset="1" stop-color="#0B1120"/></linearGradient></defs><rect x="0.5" y="0.5" width="359" height="194" rx="12" fill="url(#bg)" stroke="#1E293B" stroke-width="1"/>
 <text x="22" y="32" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="16" font-weight="700" fill="#22C55E">Most Used Languages</text>
-<rect x="22.000" y="48" width="174.371" height="11" fill="#3178c6" rx="5"/>
-<rect x="196.371" y="48" width="36.372" height="11" fill="#e34c26"/>
-<rect x="232.743" y="48" width="30.391" height="11" fill="#3572A5"/>
-<rect x="263.134" y="48" width="29.320" height="11" fill="#dea584"/>
-<rect x="292.455" y="48" width="14.727" height="11" fill="#f1e05a"/>
-<rect x="307.182" y="48" width="14.560" height="11" fill="#89e051"/>
-<rect x="321.742" y="48" width="11.763" height="11" fill="#663399"/>
-<rect x="333.504" y="48" width="4.496" height="11" fill="#f34b7d"/>
+<rect x="22.000" y="48" width="174.446" height="11" fill="#3178c6" rx="5"/>
+<rect x="196.446" y="48" width="36.390" height="11" fill="#e34c26"/>
+<rect x="232.836" y="48" width="30.405" height="11" fill="#3572A5"/>
+<rect x="263.241" y="48" width="29.192" height="11" fill="#dea584"/>
+<rect x="292.433" y="48" width="14.734" height="11" fill="#f1e05a"/>
+<rect x="307.167" y="48" width="14.567" height="11" fill="#89e051"/>
+<rect x="321.734" y="48" width="11.768" height="11" fill="#663399"/>
+<rect x="333.502" y="48" width="4.498" height="11" fill="#f34b7d"/>
 <circle cx="27" cy="82" r="5" fill="#3178c6"/>
 <text x="38" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">TypeScript <tspan fill="#F8FAFC" font-weight="700">55.2%</tspan></text>
 <circle cx="201" cy="82" r="5" fill="#e34c26"/>
@@ -16,7 +16,7 @@
 <circle cx="27" cy="108" r="5" fill="#3572A5"/>
 <text x="38" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Python <tspan fill="#F8FAFC" font-weight="700">9.6%</tspan></text>
 <circle cx="201" cy="108" r="5" fill="#dea584"/>
-<text x="212" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Rust <tspan fill="#F8FAFC" font-weight="700">9.3%</tspan></text>
+<text x="212" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Rust <tspan fill="#F8FAFC" font-weight="700">9.2%</tspan></text>
 <circle cx="27" cy="134" r="5" fill="#f1e05a"/>
 <text x="38" y="138" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">JavaScript <tspan fill="#F8FAFC" font-weight="700">4.7%</tspan></text>
 <circle cx="201" cy="134" r="5" fill="#89e051"/>
