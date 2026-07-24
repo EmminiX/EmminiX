@@ -6,7 +6,7 @@
 <text x="300" y="66" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" font-weight="700" fill="#F8FAFC">15</text>
 <g transform="translate(26,85)"><circle cx="3" cy="3" r="2" fill="none" stroke="#22C55E" stroke-width="1.6"/><circle cx="3" cy="11" r="2" fill="none" stroke="#22C55E" stroke-width="1.6"/><circle cx="11" cy="11" r="2" fill="none" stroke="#22C55E" stroke-width="1.6"/><path d="M3 5 V9 M11 9 V7 a4 4 0 0 0 -4 -4 H5.2" fill="none" stroke="#22C55E" stroke-width="1.6"/></g>
 <text x="50" y="96" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" fill="#94A3B8">Total PRs:</text>
-<text x="300" y="96" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" font-weight="700" fill="#F8FAFC">656</text>
+<text x="300" y="96" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" font-weight="700" fill="#F8FAFC">659</text>
 <g transform="translate(26,115)"><circle cx="7" cy="7" r="6" fill="none" stroke="#22C55E" stroke-width="1.6"/><circle cx="7" cy="7" r="1.6" fill="#22C55E"/></g>
 <text x="50" y="126" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" fill="#94A3B8">Total Issues:</text>
 <text x="300" y="126" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="14" font-weight="700" fill="#F8FAFC">283</text>
