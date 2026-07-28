@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="195" viewBox="0 0 360 195" role="img" aria-label="Most used languages">
 <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F172A"/><stop offset="1" stop-color="#0B1120"/></linearGradient></defs><rect x="0.5" y="0.5" width="359" height="194" rx="12" fill="url(#bg)" stroke="#1E293B" stroke-width="1"/>
 <text x="22" y="32" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="16" font-weight="700" fill="#22C55E">Most Used Languages</text>
-<rect x="22.000" y="48" width="174.034" height="11" fill="#3178c6" rx="5"/>
-<rect x="196.034" y="48" width="36.233" height="11" fill="#e34c26"/>
-<rect x="232.267" y="48" width="30.275" height="11" fill="#3572A5"/>
-<rect x="262.542" y="48" width="30.043" height="11" fill="#dea584"/>
+<rect x="22.000" y="48" width="174.035" height="11" fill="#3178c6" rx="5"/>
+<rect x="196.035" y="48" width="36.233" height="11" fill="#e34c26"/>
+<rect x="232.268" y="48" width="30.275" height="11" fill="#3572A5"/>
+<rect x="262.543" y="48" width="30.043" height="11" fill="#dea584"/>
 <rect x="292.585" y="48" width="14.714" height="11" fill="#f1e05a"/>
-<rect x="307.299" y="48" width="14.504" height="11" fill="#89e051"/>
+<rect x="307.300" y="48" width="14.504" height="11" fill="#89e051"/>
 <rect x="321.804" y="48" width="11.718" height="11" fill="#663399"/>
 <rect x="333.522" y="48" width="4.478" height="11" fill="#f34b7d"/>
 <circle cx="27" cy="82" r="5" fill="#3178c6"/>
