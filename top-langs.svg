@@ -1,26 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="195" viewBox="0 0 360 195" role="img" aria-label="Most used languages">
 <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F172A"/><stop offset="1" stop-color="#0B1120"/></linearGradient></defs><rect x="0.5" y="0.5" width="359" height="194" rx="12" fill="url(#bg)" stroke="#1E293B" stroke-width="1"/>
 <text x="22" y="32" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="16" font-weight="700" fill="#22C55E">Most Used Languages</text>
-<rect x="22.000" y="48" width="173.946" height="11" fill="#3178c6" rx="5"/>
-<rect x="195.946" y="48" width="35.895" height="11" fill="#e34c26"/>
-<rect x="231.841" y="48" width="30.796" height="11" fill="#dea584"/>
-<rect x="262.638" y="48" width="29.992" height="11" fill="#3572A5"/>
-<rect x="292.630" y="48" width="14.794" height="11" fill="#f1e05a"/>
-<rect x="307.423" y="48" width="14.527" height="11" fill="#89e051"/>
-<rect x="321.951" y="48" width="11.613" height="11" fill="#663399"/>
-<rect x="333.563" y="48" width="4.437" height="11" fill="#f34b7d"/>
+<rect x="22.000" y="48" width="171.860" height="11" fill="#3178c6" rx="5"/>
+<rect x="193.860" y="48" width="36.462" height="11" fill="#e34c26"/>
+<rect x="230.323" y="48" width="31.283" height="11" fill="#dea584"/>
+<rect x="261.606" y="48" width="30.466" height="11" fill="#3572A5"/>
+<rect x="292.072" y="48" width="14.999" height="11" fill="#f1e05a"/>
+<rect x="307.070" y="48" width="14.757" height="11" fill="#89e051"/>
+<rect x="321.827" y="48" width="11.666" height="11" fill="#663399"/>
+<rect x="333.493" y="48" width="4.507" height="11" fill="#f34b7d"/>
 <circle cx="27" cy="82" r="5" fill="#3178c6"/>
-<text x="38" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">TypeScript <tspan fill="#F8FAFC" font-weight="700">55.0%</tspan></text>
+<text x="38" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">TypeScript <tspan fill="#F8FAFC" font-weight="700">54.4%</tspan></text>
 <circle cx="201" cy="82" r="5" fill="#e34c26"/>
-<text x="212" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">HTML <tspan fill="#F8FAFC" font-weight="700">11.4%</tspan></text>
+<text x="212" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">HTML <tspan fill="#F8FAFC" font-weight="700">11.5%</tspan></text>
 <circle cx="27" cy="108" r="5" fill="#dea584"/>
-<text x="38" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Rust <tspan fill="#F8FAFC" font-weight="700">9.7%</tspan></text>
+<text x="38" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Rust <tspan fill="#F8FAFC" font-weight="700">9.9%</tspan></text>
 <circle cx="201" cy="108" r="5" fill="#3572A5"/>
-<text x="212" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Python <tspan fill="#F8FAFC" font-weight="700">9.5%</tspan></text>
+<text x="212" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Python <tspan fill="#F8FAFC" font-weight="700">9.6%</tspan></text>
 <circle cx="27" cy="134" r="5" fill="#f1e05a"/>
 <text x="38" y="138" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">JavaScript <tspan fill="#F8FAFC" font-weight="700">4.7%</tspan></text>
 <circle cx="201" cy="134" r="5" fill="#89e051"/>
-<text x="212" y="138" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Shell <tspan fill="#F8FAFC" font-weight="700">4.6%</tspan></text>
+<text x="212" y="138" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Shell <tspan fill="#F8FAFC" font-weight="700">4.7%</tspan></text>
 <circle cx="27" cy="160" r="5" fill="#663399"/>
 <text x="38" y="164" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">CSS <tspan fill="#F8FAFC" font-weight="700">3.7%</tspan></text>
 <circle cx="201" cy="160" r="5" fill="#f34b7d"/>
