@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="195" viewBox="0 0 360 195" role="img" aria-label="Most used languages">
 <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F172A"/><stop offset="1" stop-color="#0B1120"/></linearGradient></defs><rect x="0.5" y="0.5" width="359" height="194" rx="12" fill="url(#bg)" stroke="#1E293B" stroke-width="1"/>
 <text x="22" y="32" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="16" font-weight="700" fill="#22C55E">Most Used Languages</text>
-<rect x="22.000" y="48" width="174.269" height="11" fill="#3178c6" rx="5"/>
-<rect x="196.269" y="48" width="40.284" height="11" fill="#e34c26"/>
-<rect x="236.553" y="48" width="33.071" height="11" fill="#3572A5"/>
-<rect x="269.624" y="48" width="19.451" height="11" fill="#dea584"/>
-<rect x="289.075" y="48" width="15.987" height="11" fill="#89e051"/>
-<rect x="305.062" y="48" width="15.741" height="11" fill="#f1e05a"/>
-<rect x="320.802" y="48" width="12.306" height="11" fill="#663399"/>
-<rect x="333.108" y="48" width="4.892" height="11" fill="#f34b7d"/>
+<rect x="22.000" y="48" width="174.099" height="11" fill="#3178c6" rx="5"/>
+<rect x="196.099" y="48" width="40.127" height="11" fill="#e34c26"/>
+<rect x="236.226" y="48" width="33.430" height="11" fill="#3572A5"/>
+<rect x="269.656" y="48" width="19.365" height="11" fill="#dea584"/>
+<rect x="289.020" y="48" width="15.916" height="11" fill="#89e051"/>
+<rect x="304.936" y="48" width="15.855" height="11" fill="#f1e05a"/>
+<rect x="320.791" y="48" width="12.338" height="11" fill="#663399"/>
+<rect x="333.130" y="48" width="4.870" height="11" fill="#f34b7d"/>
 <circle cx="27" cy="82" r="5" fill="#3178c6"/>
 <text x="38" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">TypeScript <tspan fill="#F8FAFC" font-weight="700">55.1%</tspan></text>
 <circle cx="201" cy="82" r="5" fill="#e34c26"/>
 <text x="212" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">HTML <tspan fill="#F8FAFC" font-weight="700">12.7%</tspan></text>
 <circle cx="27" cy="108" r="5" fill="#3572A5"/>
-<text x="38" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Python <tspan fill="#F8FAFC" font-weight="700">10.5%</tspan></text>
+<text x="38" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Python <tspan fill="#F8FAFC" font-weight="700">10.6%</tspan></text>
 <circle cx="201" cy="108" r="5" fill="#dea584"/>
-<text x="212" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Rust <tspan fill="#F8FAFC" font-weight="700">6.2%</tspan></text>
+<text x="212" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Rust <tspan fill="#F8FAFC" font-weight="700">6.1%</tspan></text>
 <circle cx="27" cy="134" r="5" fill="#89e051"/>
-<text x="38" y="138" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Shell <tspan fill="#F8FAFC" font-weight="700">5.1%</tspan></text>
+<text x="38" y="138" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Shell <tspan fill="#F8FAFC" font-weight="700">5.0%</tspan></text>
 <circle cx="201" cy="134" r="5" fill="#f1e05a"/>
 <text x="212" y="138" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">JavaScript <tspan fill="#F8FAFC" font-weight="700">5.0%</tspan></text>
 <circle cx="27" cy="160" r="5" fill="#663399"/>
