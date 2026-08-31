@@ -50,8 +50,8 @@ jobs:
             exit 1
           fi
 
-          # Format with thousands separator
-          FORMATTED=$(printf "%'d" "$TOTAL")
+          # Format with thousands separator (numfmt is locale-independent)
+          FORMATTED=$(numfmt --grouping "$TOTAL")
 
           cat > contributions.json <<EOF
           {
