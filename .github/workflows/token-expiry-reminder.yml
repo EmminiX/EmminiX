@@ -1,0 +1,112 @@
+# ──────────────────────────────────────────────────────────────────────────
+#  METRICS_TOKEN expiry reminder
+#
+#  Runs weekly (every Monday at 09:00 UTC). Checks the expiry date stored in
+#  the METRICS_TOKEN_EXPIRY secret (format: YYYY-MM-DD) and opens a GitHub
+#  issue when the token is within 30 days of expiry.
+#
+#  ONE-TIME SETUP:
+#   1. Add a second repo secret:
+#      Settings → Secrets and variables → Actions → "New repository secret"
+#      Name:  METRICS_TOKEN_EXPIRY
+#      Value: <expiry date of your METRICS_TOKEN, e.g. 2027-06-27>
+#   2. When you rotate METRICS_TOKEN, update METRICS_TOKEN_EXPIRY to the new
+#      expiry date at the same time.
+#
+#  When a reminder issue is opened you will receive a GitHub notification.
+#  The issue title is unique per-expiry-date so duplicates are suppressed.
+# ──────────────────────────────────────────────────────────────────────────
+
+name: Token Expiry Reminder
+
+on:
+  schedule:
+    - cron: "0 9 * * 1"   # every Monday at 09:00 UTC
+  workflow_dispatch:        # manual trigger to test immediately
+
+permissions:
+  issues: write
+
+jobs:
+  check-expiry:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Calculate days until token expiry
+        id: calc
+        env:
+          EXPIRY_DATE: ${{ secrets.METRICS_TOKEN_EXPIRY }}
+        run: |
+          set -euo pipefail
+          if [ -z "${EXPIRY_DATE:-}" ]; then
+            echo "::warning::METRICS_TOKEN_EXPIRY secret is not set. Add it (YYYY-MM-DD) to enable reminders."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          expiry=$(date -u -d "$EXPIRY_DATE" +%s 2>/dev/null) || {
+            echo "::error::METRICS_TOKEN_EXPIRY is not a valid date: $EXPIRY_DATE"
+            exit 1
+          }
+          today=$(date -u +%s)
+          days_left=$(( (expiry - today) / 86400 ))
+          echo "METRICS_TOKEN expires on $EXPIRY_DATE — $days_left days remaining"
+          echo "days_left=$days_left"     >> "$GITHUB_OUTPUT"
+          echo "expiry_date=$EXPIRY_DATE" >> "$GITHUB_OUTPUT"
+          if [ "$days_left" -gt 30 ]; then
+            echo "Token is healthy; no reminder needed."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open reminder issue
+        if: steps.calc.outputs.skip == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const daysLeft   = parseInt("${{ steps.calc.outputs.days_left }}", 10);
+            const expiryDate = "${{ steps.calc.outputs.expiry_date }}";
+            const steps_url  = "https://github.com/settings/tokens/new";
+            const scopes     = "`repo`, `read:user`, `read:org`";
+            const secret_tip = "Update the `METRICS_TOKEN` secret — **Settings → Secrets and variables → Actions**";
+            const expiry_tip = "Update the `METRICS_TOKEN_EXPIRY` secret to the new expiry date (`YYYY-MM-DD`)";
+            const steps_md   = `1. Create a new classic PAT at ${steps_url}\n   - Scopes: ${scopes}\n   - Expiry: 1 year\n2. ${secret_tip}\n3. ${expiry_tip}`;
+
+            let emoji, urgency, labelDays, body;
+            if (daysLeft <= 0) {
+              emoji     = "🔴";
+              urgency   = "EXPIRED";
+              labelDays = `expired on ${expiryDate}`;
+              body      = `## 🔴 METRICS_TOKEN has EXPIRED\n\nAll auto-update workflows (Metrics, Contributions, stats cards, activity chart) are now **failing silently**.\n\n### Action required\n\n${steps_md}\n4. Re-run the **Metrics** and **Contributions** workflows manually to verify.`;
+            } else if (daysLeft <= 7) {
+              emoji     = "🟠";
+              urgency   = "CRITICAL";
+              labelDays = `expires in ${daysLeft} day(s) — ${expiryDate}`;
+              body      = `## 🟠 METRICS_TOKEN expires in ${daysLeft} day(s)\n\nExpiry date: \`${expiryDate}\`\n\nAll auto-update workflows will stop working when it expires.\n\n### Action required\n\n${steps_md}`;
+            } else {
+              emoji     = "🟡";
+              urgency   = "WARNING";
+              labelDays = `expires in ${daysLeft} days — ${expiryDate}`;
+              body      = `## 🟡 METRICS_TOKEN expires in ${daysLeft} days\n\nExpiry date: \`${expiryDate}\`\n\nSchedule time to rotate it before it lapses.\n\n### Steps when ready\n\n${steps_md}`;
+            }
+
+            const title = `${emoji} METRICS_TOKEN ${urgency}: ${labelDays}`;
+
+            const existing = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo:  context.repo.repo,
+              state: "open",
+            });
+            const dupe = existing.data.find(i => i.title === title);
+            if (dupe) {
+              core.info(`Reminder issue already open (#${dupe.number}); skipping.`);
+              return;
+            }
+
+            await github.rest.issues.create({
+              owner:  context.repo.owner,
+              repo:   context.repo.repo,
+              title,
+              body,
+              labels: ["maintenance"],
+            });
+            core.info("Reminder issue created.");
