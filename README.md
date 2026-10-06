@@ -5,7 +5,7 @@
      Terminal-Command-Center profile · v4.0 · 2026-10-05
      ═══════════════════════════════════════════════════════════════════════ -->
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,50:0F172A,100:0F172A&height=140&section=header&text=NEUROBRIDGE%20%2F%2F%20SYSTEM%20ONLINE&fontSize=34&fontColor=22C55E&animation=fadeIn&fontAlignY=42&desc=engaging%20minds%20%C2%B7%20merging%20ideas%20%C2%B7%20building%20accessible%20AI&descSize=14&descAlignY=68&descColor=94A3B8" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,50:0F172A,100:0F172A&height=140&section=header&text=NEUROBRIDGE%20%2F%2F%20SYSTEM%20ONLINE&fontSize=34&fontColor=22C55E&animation=fadeIn&fontAlignY=42&desc=Engaging%20Minds%20%C2%B7%20Merging%20Ideas%20%C2%B7%20building%20accessible%20AI&descSize=14&descAlignY=68&descColor=94A3B8" />
 
 <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=2800&pause=900&color=22C55E&center=true&vCenter=true&width=760&lines=%24+whoami;Emanuel+Covasa%2C+founder+of+NeuroBridgeEDU;%24+./mission+--start;Privacy-first+AI.+Built+by+a+neurodivergent+mind.;%24+./status+--verbose;Father+of+Arthur+and+Maya+%C2%B7+County+Leitrim%2C+Ireland" alt="Terminal role typing animation" />
 
