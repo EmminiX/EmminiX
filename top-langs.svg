@@ -1,28 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="195" viewBox="0 0 360 195" role="img" aria-label="Most used languages">
 <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F172A"/><stop offset="1" stop-color="#0B1120"/></linearGradient></defs><rect x="0.5" y="0.5" width="359" height="194" rx="12" fill="url(#bg)" stroke="#1E293B" stroke-width="1"/>
 <text x="22" y="32" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="16" font-weight="700" fill="#22C55E">Most Used Languages</text>
-<rect x="22.000" y="48" width="190.202" height="11" fill="#3178c6" rx="5"/>
-<rect x="212.202" y="48" width="43.841" height="11" fill="#e34c26"/>
-<rect x="256.043" y="48" width="26.430" height="11" fill="#3572A5"/>
-<rect x="282.474" y="48" width="15.654" height="11" fill="#f1e05a"/>
-<rect x="298.127" y="48" width="12.348" height="11" fill="#663399"/>
-<rect x="310.476" y="48" width="12.231" height="11" fill="#dea584"/>
-<rect x="322.707" y="48" width="11.385" height="11" fill="#89e051"/>
-<rect x="334.092" y="48" width="3.908" height="11" fill="#00ADD8"/>
+<rect x="22.000" y="48" width="189.372" height="11" fill="#3178c6" rx="5"/>
+<rect x="211.372" y="48" width="43.793" height="11" fill="#e34c26"/>
+<rect x="255.165" y="48" width="26.291" height="11" fill="#3572A5"/>
+<rect x="281.455" y="48" width="15.707" height="11" fill="#f1e05a"/>
+<rect x="297.162" y="48" width="12.290" height="11" fill="#663399"/>
+<rect x="309.452" y="48" width="12.159" height="11" fill="#dea584"/>
+<rect x="321.611" y="48" width="11.512" height="11" fill="#89e051"/>
+<rect x="333.123" y="48" width="4.877" height="11" fill="#00ADD8"/>
 <circle cx="27" cy="82" r="5" fill="#3178c6"/>
-<text x="38" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">TypeScript <tspan fill="#F8FAFC" font-weight="700">60.2%</tspan></text>
+<text x="38" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">TypeScript <tspan fill="#F8FAFC" font-weight="700">59.9%</tspan></text>
 <circle cx="201" cy="82" r="5" fill="#e34c26"/>
 <text x="212" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">HTML <tspan fill="#F8FAFC" font-weight="700">13.9%</tspan></text>
 <circle cx="27" cy="108" r="5" fill="#3572A5"/>
-<text x="38" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Python <tspan fill="#F8FAFC" font-weight="700">8.4%</tspan></text>
+<text x="38" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Python <tspan fill="#F8FAFC" font-weight="700">8.3%</tspan></text>
 <circle cx="201" cy="108" r="5" fill="#f1e05a"/>
 <text x="212" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">JavaScript <tspan fill="#F8FAFC" font-weight="700">5.0%</tspan></text>
 <circle cx="27" cy="134" r="5" fill="#663399"/>
 <text x="38" y="138" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">CSS <tspan fill="#F8FAFC" font-weight="700">3.9%</tspan></text>
 <circle cx="201" cy="134" r="5" fill="#dea584"/>
-<text x="212" y="138" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Rust <tspan fill="#F8FAFC" font-weight="700">3.9%</tspan></text>
+<text x="212" y="138" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Rust <tspan fill="#F8FAFC" font-weight="700">3.8%</tspan></text>
 <circle cx="27" cy="160" r="5" fill="#89e051"/>
 <text x="38" y="164" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Shell <tspan fill="#F8FAFC" font-weight="700">3.6%</tspan></text>
 <circle cx="201" cy="160" r="5" fill="#00ADD8"/>
-<text x="212" y="164" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Go <tspan fill="#F8FAFC" font-weight="700">1.2%</tspan></text>
+<text x="212" y="164" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Go <tspan fill="#F8FAFC" font-weight="700">1.5%</tspan></text>
 </svg>
