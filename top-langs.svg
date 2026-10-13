@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="195" viewBox="0 0 360 195" role="img" aria-label="Most used languages">
 <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F172A"/><stop offset="1" stop-color="#0B1120"/></linearGradient></defs><rect x="0.5" y="0.5" width="359" height="194" rx="12" fill="url(#bg)" stroke="#1E293B" stroke-width="1"/>
 <text x="22" y="32" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="16" font-weight="700" fill="#22C55E">Most Used Languages</text>
-<rect x="22.000" y="48" width="171.376" height="11" fill="#3178c6" rx="5"/>
-<rect x="193.376" y="48" width="66.966" height="11" fill="#e34c26"/>
-<rect x="260.342" y="48" width="25.532" height="11" fill="#3572A5"/>
-<rect x="285.874" y="48" width="14.631" height="11" fill="#f1e05a"/>
-<rect x="300.505" y="48" width="11.179" height="11" fill="#663399"/>
-<rect x="311.685" y="48" width="11.001" height="11" fill="#dea584"/>
-<rect x="322.685" y="48" width="10.455" height="11" fill="#89e051"/>
-<rect x="333.140" y="48" width="4.860" height="11" fill="#00ADD8"/>
+<rect x="22.000" y="48" width="171.327" height="11" fill="#3178c6" rx="5"/>
+<rect x="193.327" y="48" width="66.946" height="11" fill="#e34c26"/>
+<rect x="260.274" y="48" width="25.524" height="11" fill="#3572A5"/>
+<rect x="285.798" y="48" width="14.633" height="11" fill="#f1e05a"/>
+<rect x="300.431" y="48" width="11.176" height="11" fill="#663399"/>
+<rect x="311.607" y="48" width="10.997" height="11" fill="#dea584"/>
+<rect x="322.605" y="48" width="10.497" height="11" fill="#89e051"/>
+<rect x="333.101" y="48" width="4.899" height="11" fill="#00ADD8"/>
 <circle cx="27" cy="82" r="5" fill="#3178c6"/>
 <text x="38" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">TypeScript <tspan fill="#F8FAFC" font-weight="700">54.2%</tspan></text>
 <circle cx="201" cy="82" r="5" fill="#e34c26"/>
@@ -24,5 +24,5 @@
 <circle cx="27" cy="160" r="5" fill="#89e051"/>
 <text x="38" y="164" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Shell <tspan fill="#F8FAFC" font-weight="700">3.3%</tspan></text>
 <circle cx="201" cy="160" r="5" fill="#00ADD8"/>
-<text x="212" y="164" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Go <tspan fill="#F8FAFC" font-weight="700">1.5%</tspan></text>
+<text x="212" y="164" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Go <tspan fill="#F8FAFC" font-weight="700">1.6%</tspan></text>
 </svg>
