@@ -1,18 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="360" height="195" viewBox="0 0 360 195" role="img" aria-label="Most used languages">
 <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0F172A"/><stop offset="1" stop-color="#0B1120"/></linearGradient></defs><rect x="0.5" y="0.5" width="359" height="194" rx="12" fill="url(#bg)" stroke="#1E293B" stroke-width="1"/>
 <text x="22" y="32" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="16" font-weight="700" fill="#22C55E">Most Used Languages</text>
-<rect x="22.000" y="48" width="133.564" height="11" fill="#3178c6" rx="5"/>
-<rect x="155.564" y="48" width="118.018" height="11" fill="#e34c26"/>
-<rect x="273.582" y="48" width="21.684" height="11" fill="#3572A5"/>
-<rect x="295.266" y="48" width="12.430" height="11" fill="#f1e05a"/>
-<rect x="307.696" y="48" width="9.005" height="11" fill="#663399"/>
-<rect x="316.701" y="48" width="8.558" height="11" fill="#dea584"/>
-<rect x="325.259" y="48" width="8.260" height="11" fill="#89e051"/>
-<rect x="333.519" y="48" width="4.481" height="11" fill="#00ADD8"/>
+<rect x="22.000" y="48" width="133.385" height="11" fill="#3178c6" rx="5"/>
+<rect x="155.385" y="48" width="118.245" height="11" fill="#e34c26"/>
+<rect x="273.630" y="48" width="21.670" height="11" fill="#3572A5"/>
+<rect x="295.300" y="48" width="12.424" height="11" fill="#f1e05a"/>
+<rect x="307.724" y="48" width="8.993" height="11" fill="#663399"/>
+<rect x="316.717" y="48" width="8.547" height="11" fill="#dea584"/>
+<rect x="325.264" y="48" width="8.249" height="11" fill="#89e051"/>
+<rect x="333.513" y="48" width="4.487" height="11" fill="#00ADD8"/>
 <circle cx="27" cy="82" r="5" fill="#3178c6"/>
-<text x="38" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">TypeScript <tspan fill="#F8FAFC" font-weight="700">42.3%</tspan></text>
+<text x="38" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">TypeScript <tspan fill="#F8FAFC" font-weight="700">42.2%</tspan></text>
 <circle cx="201" cy="82" r="5" fill="#e34c26"/>
-<text x="212" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">HTML <tspan fill="#F8FAFC" font-weight="700">37.3%</tspan></text>
+<text x="212" y="86" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">HTML <tspan fill="#F8FAFC" font-weight="700">37.4%</tspan></text>
 <circle cx="27" cy="108" r="5" fill="#3572A5"/>
 <text x="38" y="112" font-family="ui-monospace,'JetBrains Mono',Menlo,monospace" font-size="12" fill="#94A3B8">Python <tspan fill="#F8FAFC" font-weight="700">6.9%</tspan></text>
 <circle cx="201" cy="108" r="5" fill="#f1e05a"/>
